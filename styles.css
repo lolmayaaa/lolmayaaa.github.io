@@ -1,0 +1,129 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Main;
+    color: white;
+    overflow: hidden;
+}
+
+@font-face {
+  font-family: Main;
+  src: url(fonts/Bold.woff2);
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 1em;
+}
+
+.discord-handle {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.about-btn { animation-delay: 1s; }
+.projects-btn { animation-delay: 1.1s; }
+.contact-btn { animation-delay: 1.2s; }
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title .Big {
+    font-size: 50px;
+    margin-bottom: 40px;
+    animation: slideUpFadeIn 1s ease-out forwards;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    font-family: Main;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 1s ease-out 1s forwards;
+}
+
+.back-btn {
+    margin-top: 30px;
+    animation: none;
+    opacity: 1;
+    transform: none;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.about-btn {
+    animation-delay: 1s;
+}
+
+.projects-btn {
+    animation-delay: 1.1s;
+}
+
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
