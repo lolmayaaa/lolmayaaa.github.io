@@ -66,24 +66,6 @@ body {
     }
 }
 
-.nav-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Main Content */
-.scroll-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.scroll-container::-webkit-scrollbar {
-    display: none;
-}
-
 .minecraft-username {
     display: inline-block;
     margin-left: 15px;
@@ -106,6 +88,23 @@ body {
     }
 }
 
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
 
 /* Home Section */
 #home {
@@ -449,5 +448,4 @@ body {
         0 15px 35px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.05); /* subtle border effect */
     z-index: 1;
-
 }
