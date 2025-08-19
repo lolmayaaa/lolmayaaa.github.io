@@ -84,6 +84,29 @@ body {
     display: none;
 }
 
+.minecraft-username {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(70px) translateX(-20px);
+    animation: fadeUpRight 1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+    vertical-align: middle;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .minecraft-username {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+}
+
+
 /* Home Section */
 #home {
     scroll-snap-align: start;
@@ -426,4 +449,5 @@ body {
         0 15px 35px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.05); /* subtle border effect */
     z-index: 1;
+
 }
